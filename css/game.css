@@ -1,0 +1,249 @@
+main{
+   display: flex; 
+   flex-direction: column;
+   width: 100%;
+   max-width: 800vw;
+   background-color:#2B88FF;
+   background-size: cover;
+   min-height: 100vh;
+   align-items: center;
+   justify-content: center;
+   padding: 20px 20px 50px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+.card{
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    position: relative;
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
+    background-color: rgb(221, 221, 221, 0.8);
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: all 500ms ease  ;
+}
+.front{
+    transform: rotateY(180deg);
+}
+.back{
+    background-image: url('../imagens/cover.jpg');
+    backface-visibility: hidden;
+}
+
+.back:hover{
+    cursor: pointer;
+}
+
+.revealCard{
+    transform: rotateY(180deg);
+}
+.disabledCard{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+button{
+    cursor: pointer;
+    background-color:  rgba(255, 255, 255, 0);
+    font-size: 15px;
+}
+* @media (max-width: 630px) {
+    header{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 12px;
+    }
+    main {
+        width: 100%;
+        max-width: 630px;
+        max-height: 900px;
+    }
+}
+@media (max-width: 550px) {
+    header{
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 11px;
+    }
+    main {
+        width: 100%;
+        max-width: 550px;
+        max-height: 780px;
+    }
+}
+@media (max-width: 500px) {
+    header{
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 10px;
+    }
+    main {
+        width: 100%;
+        max-width: 500px;
+        max-height: 750px;
+    }
+}
+@media (max-width: 450px) {
+    header{
+        font-size: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 9px;
+    }
+    main {
+        width: 100%;   
+        max-width: 450px;
+        max-height: 700px;
+    }
+}
+@media (max-width: 410px) {
+    header{
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 8px;
+    }
+    main {
+        max-width: 410px;
+        max-height: 660px;
+    }
+}
+@media (max-width: 370px) {
+    header{
+        font-size: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 7px;
+    }
+    main {
+        width: 100%;
+        max-width: 370px;
+        max-height: 590px ;
+    }
+}
+@media (max-width: 330px) {
+    header{
+        font-size: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: 0 0 30px;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+        background-color:  rgba(255, 255, 255, 0);
+        font-size: 6px;
+    }
+    main {
+        width: 100%;
+        max-width: 330px;
+        max-height: 580px;
+    }
+} 
